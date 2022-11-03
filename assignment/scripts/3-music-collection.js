@@ -62,33 +62,21 @@ let collection = [
 
 
 ];
+
+
 function addToCollection(title, artist, yearPublished) {
 
 }
 console.log(collection);
-// - Add a function named `showCollection`. This function should:
-// - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
-// - Console.log the number of items in the array.
-// - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
-
-// - Test the `showCollection` function.
-
-
-
-function showCollection(array) { 
-    console.log(collection.length);
+/////////////////////////////////////
+function showCollection(collection) { 
   for (let i = 0; i < collection.length; i++) {
-    console.log (showCollection(`${collection[i].title} by ${collection[i].artist} published in ${collection[i].yearPublished}`))
+    console.log (`${collection[i].title} by ${collection[i].artist} published in ${collection[i].yearPublished}`)
     
 }
-return collection
-};
-// console.log (showCollection(`${array[i].title} by ${array[i].artist} published in ${array[i].yearPublished}`))
+}
 showCollection(collection)
-
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function findByArtist(artist) {
     let matchingArtist = []
     for (let i = 0; i < collection.length; i++){
@@ -105,20 +93,8 @@ matchingArtist.push(album.title)
 
 console.log(findByArtist('Lil Baby'))
 
-console.log(findByArtist('Taylor Swift'))
-
-
-
-// - Create a function called `search`. This function should:
-//   - Take an input parameter for a search criteria object. Create your solution based on a search object that has these properties:
-//   ```
-//   { artist: 'Ray Charles', year: 1957 }
-//   ```
-//   - The returned output from `search` should meet these requirements:
-//     - Return a new array of all items in the `collection` matching *all* of the search criteria.
-//     - If no results are found, return an empty array.
-//     - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
-
+console.log(findByArtist('Taylor Swift'));
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function search(singer){
 let matchingSinger = []
 for (let i = 0; i< collection.length; i++) {
